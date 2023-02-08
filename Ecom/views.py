@@ -271,7 +271,7 @@ class CreateCard(LoginRequiredMixin, View):
                 'total': total,
 
             }
-        return render(request, template_name="checkout_complete_backup.html", context={"intent": confirm_payment,
+        return render(request, template_name="checkout_complete.html", context={"intent": confirm_payment,
                                                                                        "cart_image": product,
                                                                                        "total": total})
 
