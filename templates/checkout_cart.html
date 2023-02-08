@@ -91,22 +91,7 @@
                                                     <div class="desc">{{ n.created_at }}</div>
                                                 </div>
                                             </td>
-                                            {% comment %} <td class="cart-price text-center"></td> {% endcomment %}
                                             <td class="cart-price text-center">{{ n.product.price }}</td>
-                                            {% comment %} <td class="cart-price text-center">{{ n.product.discount_price }}</td> {% endcomment %}
-                                            {#                                            <td class="cart-qty text-center">#}
-                                            {#                                                <div class="cart-qty-input">#}
-                                            {#                                                    <a href="#" class="qty-control left disabled" data-click="decrease-qty" data-target="#qty"><i class="fa fa-minus"></i></a>#}
-                                            {#                                                    <input type="text" name="qty" value="1" class="form-control" id="qty" />#}
-                                            {#                                                    <a href="#" class="qty-control right disabled" data-click="increase-qty" data-target="#qty"><i class="fa fa-plus"></i></a>#}
-                                            {#                                                </div>#}
-                                            {#                                                <div class="qty-desc">1 to max order</div>#}
-                                            {#                                            </td>#}
-
-
-{#                                            <td  class="cart-price text-center">{{ n.quantity }}<button type="button"#}
-{#                                                                        class="btn btn-outline-dark">Delete</button>#}
-{#                                            </td>#}
                                     <td style="display: flex;justify-content: space-evenly;">
                                         <form action="/checkout_cart/" method="POST">
                                             {% csrf_token %}
@@ -114,8 +99,6 @@
                                             <input type="hidden" name="operation"  value='decrease' id="operation" >
 
                                             <button class="btn btn-outline-dark" type="submit">-</button>
-
-
                                         </form>
                                         {{ n.quantity }}
                                         <form action="/checkout_cart/" method="POST">
@@ -125,19 +108,7 @@
 
                                             <button class="btn btn-outline-dark" type="submit">+</button>
                                         </form>
-
-                                         {% comment %} <form action="/checkout_cart/" method="POST">
-                                            {% csrf_token %}
-
-                                            {{ n.quantity }}
-                                            <input type="hidden" name="prod_id"  value={{ n.product_id }} id="prod_id" >
-                                            <input type="hidden" name="operation1"  value='increase' id="operation1" >
-                                            <button class="btn btn-outline-dark" type="submit">+</button>
-                                        </form> {% endcomment %}
                                     </td>
-
-
-
                                             <td class="cart-total text-center">
                                                 {{ n.pro_total }}
                                             </td>
@@ -170,16 +141,6 @@
                     <!-- BEGIN checkout-footer -->
                     <div class="checkout-footer">
                         <a href="/" class="btn btn-white btn-lg pull-left">Continue Shopping</a>
-                        {% comment %} <form action="{% url 'check' %}" method="post"> {% endcomment %}
-                            {% comment %} {% csrf_token %}
-                            <input type="text" name="total" value="{{ total }}" hidden>
-                            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                            data-key="{{ key }}"
-                            data-description="Payment Gateway"
-                            data-amount = "{{total}}"
-                            data-locate="auto">
-                            </script>
-                            </form> {% endcomment %}
                          <a href="{% url 'shipping' %}" type="submit" class="btn btn-inverse btn-lg p-l-30 p-r-30 m-l-10">Checkout </a>
                     </div>
                     <!-- END checkout-footer -->
