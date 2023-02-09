@@ -1,5 +1,5 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
@@ -211,11 +211,6 @@
                                         <li><a href="/about_us/">About Us</a></li>
                                         <li><a href="/faq/">FAQ</a></li>
                                     </ul>
-<!--                                </li>-->
-<!--                                <form action="{% url 'search' %}" method="get">-->
-<!--                                  <input name="q" type="text" placeholder="Search...">-->
-<!--                                </form>-->
-<!--                                Start Search-->
                                 <li class="dropdown dropdown-hover">
                                     <a href="#" data-toggle="dropdown">
                                         <i class="fa fa-search search-btn"></i>
@@ -230,24 +225,8 @@
                                                 </span>
                                             </div>
                                         </form>
-<!--                                        End Search-->
-<!--                                        <form action="search_results.html" method="POST" name="search_form">-->
-<!--                                            <div class="input-group">-->
-<!--                                                <input type="text" placeholder="Search" class="form-control bg-silver-lighter" />-->
-<!--                                                <span class="input-group-btn">-->
-<!--                                                    <button class="btn btn-inverse" type="submit"><i class="fa fa-search"></i></button>-->
-<!--                                                </span>-->
-<!--                                            </div>-->
-<!--                                        </form>-->
                                     </div>
                                 </li>
-<!--                            <div class = "col-sm-3">-->
-<!--                                <form method="get" action="/search/">-->
-<!--                                <div class="search_box pull-right">-->
-<!--                                    <input name="query" type="text" placeholder="search"/>-->
-<!--                                </div>-->
-<!--                                </form>-->
-<!--                            </div>-->
                             </ul>
                         </div>
                     </div>
@@ -313,20 +292,6 @@
                                 </div>
                             </li>
                             <li class="divider"></li>
-<!--                            {% if request.user.is_authenticated %}-->
-<!--                            <li>-->
-<!--                                <a href="/logout/">-->
-<!--&lt;!&ndash;                                    <img src="{% static 'assets/img/admin-user1.jpg' %}" class="user-img" alt="" /> &ndash;&gt;-->
-<!--                                    <span class="hidden-md hidden-sm hidden-xs">{{request.user|title}}/Logout</span>-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                            {% else %}-->
-<!--                            <li>-->
-<!--                                <a href="/login/">-->
-<!--                                    <span class="hidden-md hidden-sm hidden-xs">Login</span>-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                            {% endif %}-->
                             <li>
                                 {% if request.user.is_authenticated %}
                              <a href="{% url 'logout' %}">{{request.user|title}}/Logout</a> {% else %}

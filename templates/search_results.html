@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-        
+
         <!-- BEGIN #page-header -->
         <div id="page-header" class="section-container page-header-container bg-black">
             <!-- BEGIN page-header-cover -->
@@ -49,20 +49,17 @@
                             </div>
                             <!-- END row -->
                         </div>
-                        <!-- New Custom Added -->
-<!--                            <ul>-->
-<!--                              {% for product in object_list %}-->
-<!--                                <li>-->
-<!--                                  {{ product.name }}-->
-<!--                                </li>-->
-<!--                              {% endfor %}-->
-<!--                            </ul>-->
-                        <!-- End Custom Added-->
                         <!-- END search-toolbar -->
                         <!-- BEGIN search-item-container -->
                         <div class="search-item-container">
                             <!-- BEGIN item-row -->
                             <div class="item-row">
+                                {% if object_list|length < 1 %}
+                                    <div class="content-404">
+                                         <h1><b>OPPS!</b> We Couldn't Find Related This Keyword.</h1>
+                                        <a href="/" class="btn btn-primary btn-lg btn-block" role="button">Back to Home</a>
+                                    </div>
+                                {% endif %}
                                 {% for product in object_list %}
                                 <!-- BEGIN item -->
                                 <div class="item item-thumbnail">
@@ -81,6 +78,7 @@
                                 </div>
                                 {% endfor %}
                                 <!-- END item -->
+                                <!-- HTML !-->
 <!--                                &lt;!&ndash; BEGIN item &ndash;&gt;-->
 <!--                                <div class="item item-thumbnail">-->
 <!--                                    <a href="product_detail.html" class="item-image">-->
@@ -287,7 +285,6 @@
                         </div>
                         <!-- END pagination -->
                     </div>
-                    <!-- END search-content -->
                     <!-- BEGIN search-sidebar -->
                     <div class="search-sidebar">
                         <h4 class="title">Filter By</h4>
@@ -314,17 +311,12 @@
                         </form>
                         <h4 class="title m-b-0">Categories</h4>
                         <ul class="search-category-list">
-                            <li><a href="#">Microsoft <span class="pull-right">(10)</span></a></li>
-                            <li><a href="#">Samsung <span class="pull-right">(15)</span></a></li>
-                            <li><a href="#">Apple <span class="pull-right">(32)</span></a></li>
-                            <li><a href="#">Micromax <span class="pull-right">(4)</span></a></li>
-                            <li><a href="#">Karbonn <span class="pull-right">(6)</span></a></li>
-                            <li><a href="#">Intex <span class="pull-right">(8)</span></a></li>
-                            <li><a href="#">Sony <span class="pull-right">(42)</span></a></li>
-                            <li><a href="#">HTC <span class="pull-right">(33)</span></a></li>
-                            <li><a href="#">Asus <span class="pull-right">(15)</span></a></li>
-                            <li><a href="#">Nokia <span class="pull-right">(84)</span></a></li>
-                            <li><a href="#">Blackberry <span class="pull-right">(8)</span></a></li>
+                            <li><a href="#">Microsoft <span class="pull-right"></span></a></li>
+                            <li><a href="#">Samsung <span class="pull-right"></span></a></li>
+                            <li><a href="#">Apple <span class="pull-right"></span></a></li>
+                            <li><a href="#">Micromax <span class="pull-right"></span></a></li>
+                            <li><a href="#">Nokia <span class="pull-right"></span></a></li>
+                            <li><a href="#">Blackberry <span class="pull-right"></span></a></li>
                         </ul>
                     </div>
                     <!-- END search-sidebar -->
@@ -334,6 +326,5 @@
             <!-- END container -->
         </div>
         <!-- END search-results -->
-    
 
 {% endblock content %}

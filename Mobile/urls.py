@@ -8,16 +8,16 @@ from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Main Home Page
+    path('', views.HomeView.as_view(), name='home'),
+    # Signup
+    path("signup/", views.RegisterFormView.as_view(), name="signup/"),
     # Login.
     path('login/', CustomLoginView.as_view(), name='login'),
     # Logout
     path('logout/', LogoutView.as_view(next_page='home'), name='logout'),
-    # Main Home Page
-    path('', views.HomeView.as_view(), name='home'),
     # Detail Product Page
     path('detail/<int:id>/', views.ProductDetail.as_view(), name='product_detail'),
-    # Signup
-    path("signup/", views.RegisterFormView.as_view(), name="signup/"),
     # Checkout Cart
     path("checkout_cart/", views.Checkoutcart.as_view(), name="checkout_cart"),
     # Payment

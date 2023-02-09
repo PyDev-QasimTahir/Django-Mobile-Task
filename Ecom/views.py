@@ -31,13 +31,6 @@ class SearchResultsView(ListView):
             Q(name__icontains=query)
         )
         return object_list
-# def Search(request):
-#     query = request.GET.get('q')
-#     if query:
-#         products = Product.objects.filter(name__icontains=query)
-#     else:
-#         products = []
-#     return render(request, 'search_results.html', {'products': products})
 
 
 # Login
