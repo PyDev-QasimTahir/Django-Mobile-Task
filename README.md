@@ -30,10 +30,13 @@ Features:-
 6. Admin dashboard for managing products and orders
 
 Contributing:-
+
 If you would like to contribute to this project, please fork the repository and create a pull request with your changes. We welcome all contributions and suggestions!
 
 License:-
+
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-Acknowledgments
+Acknowledgments:-
+
 This project was inspired by the need for a fast and user-friendly mobile e-commerce platform. Thank you to all the open source contributors who made this project possible.
