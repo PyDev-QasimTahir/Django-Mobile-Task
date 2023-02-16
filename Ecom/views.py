@@ -1,6 +1,6 @@
 import stripe
-from django.shortcuts import render, redirect, get_object_or_404
-from django.views.generic import ListView, DetailView, FormView, CreateView
+from django.shortcuts import render, redirect
+from django.views.generic import ListView, DetailView
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -9,13 +9,9 @@ from django.views import View
 from .models import Product, Company, CheckoutCart, ShippingAddress, ProductReview, Image
 from django.views.generic.edit import CreateView
 from .forms import Shipping_Form, NewUserForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login
 from django.contrib import messages
 from django.db.models import Q
-# import self as self
-from django.template import context
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth.views import LogoutView
 
 stripe.api_key = "sk_test_51MGnkUB9cJ4i47NRJUHCwwZvpfl9AV8SHzCazQiCmnvSlMO2caHLy3oORaA9Dgc3PtQmPawU0vXhm5WHHPVx33SW00NkegILHO"
 

@@ -33,6 +33,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Category, CategoryAdmin)
 
+
 # Image Model
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('picture', 'product')

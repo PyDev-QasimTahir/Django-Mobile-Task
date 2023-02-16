@@ -350,17 +350,6 @@
                                                 <input type="radio" name="rating" id="rating6" value="3" required/><label for="rating6" title="3"></label>
                                                 <input type="radio" name="rating" id="rating4" value="2" required/><label for="rating4" title="2"></label>
                                                 <input type="radio" name="rating" id="rating2" value="1" required/><label for="rating2" title="1"></label>
-<!--                                                {% comment %} <ul class="review-star">-->
-<!--                                                    {% for i in r.rating %}-->
-<!--                                                    <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                    {% endfor %}-->
-<!--                                                    {% comment %} <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                    <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                    <li class=""><i class="fa fa-star-o"></i></li> {% endcomment %}-->
-<!--                                                    {% comment %} {% for i in r.rating %}-->
-<!--                                                    <li class=""><i class="fa fa-star-o"></i></li>-->
-<!--                                                    {% endfor %}-->
-<!--                                                </ul> {% endcomment %}-->
                                                 ({{r.rating}}/5)
                                             </div>
                                             <div class="review-name">{{r.name}}</div>
@@ -374,106 +363,6 @@
                                         </div>
                                     </div>
                                     {% endfor %}
-                                    <!-- END review -->                                        <!-- END review -->
-                                        <!-- BEGIN review -->
-<!--                                        <div class="review">-->
-<!--                                            <div class="review-info">-->
-<!--                                                <div class="review-icon"><img src="{% static 'assets/img/user-2.jpg' %}" alt="" /></div>-->
-<!--                                                <div class="review-rate">-->
-<!--                                                    <ul class="review-star">-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class=""><i class="fa fa-star-o"></i></li>-->
-<!--                                                        <li class=""><i class="fa fa-star-o"></i></li>-->
-<!--                                                    </ul>-->
-<!--                                                    (3/5)-->
-<!--                                                </div>-->
-<!--                                                <div class="review-name">George</div>-->
-<!--                                                <div class="review-date">24/05/2016 8:40am</div>-->
-<!--                                            </div>                     -->
-<!--                                            <div class="review-title">-->
-<!--                                                When I buy iPhone from apple.com, is it tied to a carrier or does it come “unlocked”?-->
-<!--                                            </div>                -->
-<!--                                            <div class="review-message">-->
-<!--                                                In mauris leo, maximus at pellentesque vel, pharetra vel risus. Aenean in semper velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi volutpat mattis neque, at molestie tellus ultricies quis. Ut lobortis odio nec nunc ullamcorper, vitae faucibus augue semper. Sed luctus lobortis nulla ac volutpat. Mauris blandit scelerisque sem.-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-                                        <!-- END review -->
-                                        <!-- BEGIN review -->
-<!--                                        <div class="review">-->
-<!--                                            <div class="review-info">-->
-<!--                                                <div class="review-icon"><img src="{% static 'assets/img/user-3.jpg' %}" alt="" /></div>-->
-<!--                                                <div class="review-rate">-->
-<!--                                                    <ul class="review-star">-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                    </ul>-->
-<!--                                                    (5/5)-->
-<!--                                                </div>-->
-<!--                                                <div class="review-name">Steve</div>-->
-<!--                                                <div class="review-date">23/05/2016 8:40am</div>-->
-<!--                                            </div>                     -->
-<!--                                            <div class="review-title">-->
-<!--                                                Where is the iPhone Upgrade Program available?-->
-<!--                                            </div>                -->
-<!--                                            <div class="review-message">-->
-<!--                                                Duis ut nunc sem. Integer efficitur, justo sit amet feugiat hendrerit, arcu nisl elementum dui, in ultricies erat quam at mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec nec ultrices tellus. Mauris elementum venenatis volutpat.-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-                                        <!-- END review -->
-                                        <!-- BEGIN review -->
-<!--                                        <div class="review">-->
-<!--                                            <div class="review-info">-->
-<!--                                                <div class="review-icon"><img src="{% static 'assets/img/user-4.jpg' %}" alt="" /></div>-->
-<!--                                                <div class="review-rate">-->
-<!--                                                    <ul class="review-star">-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class=""><i class="fa fa-star-o"></i></li>-->
-<!--                                                        <li class=""><i class="fa fa-star-o"></i></li>-->
-<!--                                                        <li class=""><i class="fa fa-star-o"></i></li>-->
-<!--                                                    </ul>-->
-<!--                                                    (2/5)-->
-<!--                                                </div>-->
-<!--                                                <div class="review-name">Alfred</div>-->
-<!--                                                <div class="review-date">23/05/2016 10.02am</div>-->
-<!--                                            </div>                     -->
-<!--                                            <div class="review-title">-->
-<!--                                                Can I keep my current service plan if I choose the iPhone Upgrade Program?-->
-<!--                                            </div>                -->
-<!--                                            <div class="review-message">-->
-<!--                                                Donec vel fermentum quam. Vivamus scelerisque enim eget tristique auctor. Vivamus tempus, turpis iaculis tempus egestas, leo augue hendrerit tellus, et efficitur neque massa at neque. Aenean efficitur eleifend orci at ornare.-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-                                        <!-- END review -->
-                                        <!-- BEGIN review -->
-<!--                                        <div class="review">-->
-<!--                                            <div class="review-info">-->
-<!--                                                <div class="review-icon"><img src="{% static 'assets/img/user-5.jpg' %}" alt="" /></div>-->
-<!--                                                <div class="review-rate">-->
-<!--                                                    <ul class="review-star">-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                        <li class="active"><i class="fa fa-star"></i></li>-->
-<!--                                                    </ul>-->
-<!--                                                    (5/5)-->
-<!--                                                </div>-->
-<!--                                                <div class="review-name">Edward</div>-->
-<!--                                                <div class="review-date">22/05/2016 9.30pm</div>-->
-<!--                                            </div>                     -->
-<!--                                            <div class="review-title">-->
-<!--                                                I have an existing carrier contract or installment plan. Can I purchase with the iPhone Upgrade Program-->
-<!--                                            </div>                -->
-<!--                                            <div class="review-message">-->
-<!--                                                Aliquam consequat ut turpis non interdum. Integer blandit erat nec sapien sollicitudin, a fermentum dui venenatis. Nullam consequat at enim et aliquet. Cras mattis turpis quis eros volutpat tristique vel a ligula. Proin aliquet leo mi, et euismod metus placerat sit amet.-->
-<!--                                            </div>-->
-<!--                                        </div>-->
                                         <!-- END review -->
                                     </div>
                                     <!-- END col-7 -->
@@ -506,24 +395,6 @@
                                                     <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
                                                     <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
                                                   </div>
-<!--                                                {% comment %} <div class="rating rating-selection" name="rating" data-rating="true" data-target="rating">-->
-<!--                                                    <i class="fa fa-star-o" data-value="2"></i>-->
-<!--                                                    <i class="fa fa-star-o" data-value="4"></i>-->
-<!--                                                    <i class="fa fa-star-o" data-value="6"></i>-->
-<!--                                                    <i class="fa fa-star-o" data-value="8"></i>-->
-<!--                                                    <i class="fa fa-star-o" data-value="10"></i>-->
-<!--                                                    <span class="rating-comment">-->
-<!--                                                        <span class="rating-comment-tooltip">Click to rate</span>-->
-<!--                                                    </span>-->
-<!--                                                </div>-->
-<!--                                                <select name="rating" class="hide">-->
-<!--                                                    <option value="2">2</option>-->
-<!--                                                    <option value="4">4</option>-->
-<!--                                                    <option value="6">6</option>-->
-<!--                                                    <option value="8">8</option>-->
-<!--                                                    <option value="10">10</option>-->
-<!--                                                </select>-->
-<!--                                            </div> {% endcomment %}-->
                                             <button type="submit" class="btn btn-inverse btn-lg">Submit Review</button>
                                         </form>
                                         <br>

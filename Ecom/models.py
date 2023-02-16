@@ -12,15 +12,17 @@ class Customer(models.Model):
     name = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200)
 
-    def __str__(self):
-        return self.name
+
+def __str__(self):
+    return self.name
 
 
 class Company(models.Model):
     name = models.CharField(max_length=200)
 
-    def __str__(self):
-        return self.name
+
+def __str__(self):
+    return self.name
 
 
 class Category(models.Model):
