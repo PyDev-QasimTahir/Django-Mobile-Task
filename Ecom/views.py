@@ -13,7 +13,7 @@ from django.contrib.auth import login
 from django.contrib import messages
 from django.db.models import Q
 
-stripe.api_key = "sk_test_51MGnkUB9cJ4i47NRJUHCwwZvpfl9AV8SHzCazQiCmnvSlMO2caHLy3oORaA9Dgc3PtQmPawU0vXhm5WHHPVx33SW00NkegILHO"
+stripe.api_key = "Here_Type_Your_Own_Stripe_Key"
 
 
 # Search Results
